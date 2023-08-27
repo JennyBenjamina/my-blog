@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Inter } from 'next/font/google';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,19 +13,25 @@ export const metadata: Metadata = {
 
 const header = (
   <header>
-    <div>
+    <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
+      <Image
+        src="../vercel.svg"
+        alt="Vercel Logo"
+        width={72}
+        height={16}
+        className="mx-auto"
+      />
       <Link href="/">
-        <h1>Jenny's Blog</h1>
+        <h1 className="text-2xl mt-4 font-bold text-white">Jenny's Blog</h1>
       </Link>
-      <p>✌ Welcome to my tech blog! ✌</p>
-      <br />
+      <p className="text-slate-300">✌ Welcome to my tech blog! ✌</p>
     </div>
   </header>
 );
 
 const footer = (
   <footer>
-    <div>
+    <div className="text-center text-slate-400 border-t border-slate-500 py-6 mt-12 my-12">
       <br />
       <p>Developed by Jenny</p>
     </div>
@@ -39,9 +46,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {header}
-        {children}
-        {footer}
+        <div className="mx-auto max-w-2xl px-6">
+          {header}
+          {children}
+          {footer}
+        </div>
       </body>
     </html>
   );

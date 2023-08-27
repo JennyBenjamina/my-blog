@@ -12,7 +12,7 @@ const getPostMeta = (): PostMetadata[] => {
     const matterResult = matter(fileContents);
     return {
       title: matterResult.data.title,
-      date: matterResult.data.date.toString(),
+      date: matterResult.data.date.toLocaleDateString(),
       slug: fileName.replace('.md', ''),
       subtitle: matterResult.data.subtitle,
     };

@@ -22,8 +22,15 @@ const PostPage = (props: any) => {
 
   return (
     <div>
-      <h1>{post.data.title}</h1>
-      <Markdown>{post.content}</Markdown>
+      <div className="my-12 text-center">
+        <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
+        <p className="text-slate-400 mt-2">
+          {post.data.date.toLocaleDateString()}
+        </p>
+      </div>
+      <article className="prose ">
+        <Markdown>{post.content}</Markdown>
+      </article>
     </div>
   );
 };
