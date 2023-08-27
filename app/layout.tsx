@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 
 const header = (
   <header>
+    {/* <Image
+      src="../data.jpg"
+      alt="Vercel Logo"
+      width={572}
+      height={20}
+      className="mx-auto"
+    /> */}
     <div className="text-center bg-slate-800 p-8 my-6 rounded-md">
-      <Image
-        src="../vercel.svg"
-        alt="Vercel Logo"
-        width={72}
-        height={16}
-        className="mx-auto"
-      />
       <Link href="/">
-        <h1 className="text-2xl mt-4 font-bold text-white">Jenny's Blog</h1>
+        <h1 className="text-2xl mt-4 font-bold text-white">Hi, I'm Jenny</h1>
       </Link>
-      <p className="text-slate-300">✌ Welcome to my tech blog! ✌</p>
+      <p className="text-slate-300">✌ Welcome to my space! ✌</p>
     </div>
   </header>
 );
