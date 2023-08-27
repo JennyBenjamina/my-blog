@@ -35,4 +35,4 @@ yarn-error.log*
 next-env.d.ts
 
 # static folder for DigitalOcean app Platform
-_static
+/_static
